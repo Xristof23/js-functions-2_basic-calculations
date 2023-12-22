@@ -11,25 +11,46 @@ They should return the result of the respective calculation:
 */
 
 function add(a, b) {
-  // Code here
+  return a + b;
 }
+console.log(add(1, 7));
 
 function subtract(a, b) {
-  // Code here
+  return a - b;
 }
 
 function multiply(a, b) {
-  // Code here
+  return a * b;
 }
 
 function divide(a, b) {
-  // Code here
+  if (b != 0) {
+    return a / b;
+  } else {
+    return "Math Error";
+  }
 }
+console.log(divide(8, 5));
 
 function remainder(a, b) {
-  // Code here
+  if (b != 0) {
+    return a % b;
+  } else {
+    return "Math Error";
+  }
 }
+console.log(remainder(8, 3));
 
+function divideReturnRemainder(a, b) {
+  if (b === 0) {
+    return "Math Error";
+  } else if (a % b === 0) {
+    return a / b;
+  } else {
+    return (a - (a % b)) / b + " R. " + (a % b);
+  }
+}
+console.log(divideReturnRemainder(17, 5));
 /*
 These console.asserts check if your functions are correct. If nothing appears in your console it works properly!
 */
